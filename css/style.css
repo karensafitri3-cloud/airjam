@@ -1,13 +1,20 @@
 /* ============================================================
    GLOBAL
 ============================================================ */
-body {
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Segoe UI', sans-serif;
     background:
         radial-gradient(circle at top, rgba(0, 255, 120, 0.08), transparent 60%),
         linear-gradient(to bottom, #001a0f, #000);
     color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 body::before {
@@ -18,6 +25,12 @@ body::before {
     background: radial-gradient(circle at center, rgba(0, 255, 120, 0.05), transparent 70%);
     pointer-events: none;
     z-index: -1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
@@ -44,15 +57,20 @@ a {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
     filter: drop-shadow(0 0 10px #00ff88);
 }
 
+nav {
+    display: flex;
+    gap: 10px;
+}
+
 nav a {
-    margin: 0 15px;
+    margin: 0 10px;
     color: #00ff88;
-    text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
     position: relative;
 }
 
@@ -71,19 +89,41 @@ nav a:hover::after {
     width: 100%;
 }
 
+.nav-btn {
+    display: flex;
+    gap: 8px;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #00ff88;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
 
 /* ============================================================
    BUTTON
 ============================================================ */
 .btn {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
-    margin-left: 10px;
     font-weight: bold;
+    font-size: 0.9rem;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
 /* Daftar */
@@ -140,42 +180,61 @@ nav a:hover::after {
 ============================================================ */
 .hero {
     display: flex;
-    padding: 60px;
+    padding: 60px 50px;
     align-items: center;
     gap: 50px;
+    min-height: 60vh;
 }
 
-.hero img {
-    width: 300px;
+.hero-left {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-left img {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
     border-radius: 12px;
     box-shadow: 0 0 25px #00ff88;
     transition: 0.4s;
 }
 
-.hero img:hover {
-    transform: scale(1.08);
+.hero-left img:hover {
+    transform: scale(1.05);
 }
 
 .hero-right {
+    flex: 1;
     background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
 }
 
 .hero-right h1 {
     color: #00ff88;
     text-shadow: 0 0 10px #00ff88;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-right p {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 .cta {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 20px;
+    padding: 14px 28px;
     background: #00ff88;
     color: black;
-    border-radius: 6px;
-    text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 1rem;
     box-shadow: 0 0 15px #00ff88;
     transition: 0.3s;
 }
@@ -187,14 +246,100 @@ nav a:hover::after {
 
 
 /* ============================================================
+   DESKRIPSI
+============================================================ */
+.deskripsi {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.deskripsi h2 {
+    color: #00ff88;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00ff88;
+}
+
+.deskripsi p {
+    color: #ccc;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+
+/* ============================================================
    BANNER
 ============================================================ */
+.banner {
+    padding: 10px 20px 30px;
+}
+
 .banner img {
-    width: 60%;
+    width: 90%;
+    max-width: 1000px;
     display: block;
-    margin: 30px auto;
+    margin: 0 auto;
     border-radius: 12px;
     box-shadow: 0 0 25px #00ff88;
+}
+
+
+/* ============================================================
+   FITUR (ICON GRID)
+============================================================ */
+.fitur {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.icon-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff88;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    transition: 0.3s;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ff88;
+}
+
+.icon-box img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    transition: 0.3s;
+}
+
+.icon-box img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #00ff88);
+}
+
+.icon-box p {
+    color: #00ff88;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.icon-box small {
+    color: #aaa;
+    font-size: 0.8rem;
 }
 
 
@@ -203,7 +348,7 @@ nav a:hover::after {
 ============================================================ */
 .review {
     text-align: center;
-    padding: 60px;
+    padding: 50px 20px;
 }
 
 .review h2 {
@@ -212,54 +357,51 @@ nav a:hover::after {
     border-radius: 10px;
     border: 1px solid #00ff88;
     box-shadow: 0 0 15px #00ff88;
+    color: #00ff88;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
 }
 
 .review-box {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .card {
     background: #000;
     padding: 25px;
     border-radius: 12px;
-    width: 260px;
+    width: 280px;
     border: 1px solid #00ff88;
-    box-shadow: 0 0 15px #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
     transition: 0.3s;
+    text-align: left;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-8px);
     box-shadow: 0 0 30px #00ff88;
+}
+
+.card h3 {
+    color: #00ff88;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .stars {
     color: #00ff88;
-    margin-top: 10px;
-}
-
-
-/* ============================================================
-   ICON
-============================================================ */
-.icon {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin: 50px;
-}
-
-.icon img {
-    width: 60px;
-    transition: 0.3s;
-}
-
-.icon img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 10px #00ff88);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 
@@ -268,9 +410,11 @@ nav a:hover::after {
 ============================================================ */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     background: black;
     border-top: 1px solid #00ff88;
+    color: #aaa;
+    font-size: 0.85rem;
 }
 
 
@@ -278,7 +422,146 @@ footer {
    ANIMASI
 ============================================================ */
 @keyframes pulse {
-    0%   { box-shadow: 0 0 10px #00ff88; }
-    50%  { box-shadow: 0 0 25px #00ff88; }
-    100% { box-shadow: 0 0 10px #00ff88; }
+    0%   { box-shadow: 0 0 10px #00ff88, 0 0 20px rgba(0, 255, 136, 0.5); }
+    50%  { box-shadow: 0 0 20px #00ff88, 0 0 40px rgba(0, 255, 136, 0.8); }
+    100% { box-shadow: 0 0 10px #00ff88, 0 0 20px rgba(0, 255, 136, 0.5); }
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET (max 768px)
+============================================================ */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 15px;
+        gap: 12px;
+        border-top: 1px solid #00ff88;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 1rem;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right h1 {
+        font-size: 1.5rem;
+    }
+
+    .icon-grid {
+        gap: 15px;
+    }
+
+    .icon-box {
+        width: 140px;
+        padding: 20px 15px;
+    }
+
+    .review-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 480px)
+============================================================ */
+@media (max-width: 480px) {
+    .logo {
+        height: 38px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-right h1 {
+        font-size: 1.3rem;
+    }
+
+    .cta {
+        padding: 12px 22px;
+        font-size: 0.9rem;
+    }
+
+    .deskripsi {
+        padding: 30px 15px;
+    }
+
+    .banner img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .icon-grid {
+        gap: 12px;
+    }
+
+    .icon-box {
+        width: 100px;
+        padding: 15px 10px;
+    }
+
+    .icon-box img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .review {
+        padding: 30px 15px;
+    }
+
+    .review h2 {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+    .card {
+        padding: 18px;
+    }
 }
