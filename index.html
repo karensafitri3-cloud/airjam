@@ -1,326 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dauntogel - Situs Togel Online Terpercaya, Cepat & Aman 2026</title>
-    <meta name="description"
-        content="Dauntogel adalah situs togel online terpercaya dengan sistem cepat, aman, dan pasaran lengkap. Akses mudah dari semua perangkat dan nikmati pengalaman bermain terbaik.">
-    <meta name="keywords"
-        content="togel online, situs togel terpercaya, togel gacor, togel hari ini, togel terbaik 2026">
+
+    <!-- SEO UTAMA -->
+    <title>Dauntogel - Situs Togel Online Terpercaya, Cepat Aman 2026</title>
+    <meta name="description" content="Dauntogel adalah situs togel online terpercaya dengan sistem cepat, aman, dan pasaran lengkap. Akses mudah dari semua perangkat dan nikmati pengalaman bermain terbaik.">
+    <meta name="keywords" content="togel online, situs togel terpercaya, togel gacor, togel hari ini, togel terbaik 2026">
     <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Dauntogel - Situs Togel Online Terpercaya">
     <meta property="og:description" content="Situs togel terpercaya dengan sistem cepat, aman, dan pasaran lengkap.">
     <meta property="og:image" content="https://togenix.online/img/banner.png">
     <meta property="og:url" content="https://togenix.online">
     <meta property="og:type" content="website">
+
     <link rel="icon" href="img/logo.png" type="image/png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2%;
-            background: #000;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            height: 40px;
-        }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff0;
-        }
-
-        .nav-btn {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid #ff0;
-            border-radius: 5px;
-            color: white;
-            transition: background 0.3s;
-        }
-
-        .btn-daftar {
-            background: #ff0;
-            color: #000;
-        }
-
-        .btn:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            border-radius: 3px;
-        }
-
-        /* Hero */
-        .hero {
-            display: flex;
-            padding: 4rem 2%;
-            gap: 2rem;
-            background: #f4f4f4;
-            align-items: center;
-        }
-
-        .hero-left {
-            flex: 1;
-            text-align: center;
-        }
-
-        .hero-left img {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .cta {
-            display: inline-block;
-            background: #f00;
-            color: white;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            border-radius: 10px;
-        }
-
-        .cta:hover {
-            background: #c00;
-        }
-
-        .hero-right {
-            flex: 1;
-        }
-
-        .hero-right h1 {
-            margin-bottom: 1rem;
-        }
-
-        .hero-right p {
-            margin-bottom: 0.8rem;
-        }
-
-        /* Section Umum */
-        section {
-            padding: 3rem 2%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2,
-        h3 {
-            margin-bottom: 1rem;
-        }
-
-        /* Banner */
-        .banner img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Review */
-        .review-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .stars {
-            color: #f5a623;
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-        }
-
-        /* Icon */
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .icon-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .icon-box img {
-            height: 60px;
-            margin: 0 auto 1rem;
-        }
-
-        .icon-box p {
-            font-weight: bold;
-        }
-
-        small {
-            font-size: 0.8rem;
-            color: #666;
-            font-weight: normal;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #000;
-            color: white;
-            margin-top: 2rem;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #000;
-                flex-direction: column;
-                padding: 1rem 2%;
-                gap: 1rem;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            .nav-btn {
-                display: none;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem 4%;
-            }
-
-            .cta {
-                font-size: 1rem;
-                padding: 0.8rem 1.5rem;
-            }
-
-            section {
-                padding: 2rem 4%;
-            }
-
-            .review-box,
-            .icon-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                height: 30px;
-            }
-
-            body {
-                font-size: 14px;
-            }
-
-            .card,
-            .icon-box {
-                padding: 1.2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
+    <!-- NAVBAR -->
     <header class="navbar">
         <img src="img/logo.png" class="logo" alt="Logo Dauntogel">
         <nav id="nav-menu">
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer">DAUNTOGEL</a>
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer">SITUS TOTO</a>
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer">TOTO TOGEL</a>
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer">TOGEL ONLINE</a>
+            <a href="https://bagonggalau.com" target="_blank">DAUNTOGEL</a>
+            <a href="https://bagonggalau.com" target="_blank">SITUS TOTO</a>
+            <a href="https://bagonggalau.com" target="_blank">TOTO TOGEL</a>
+            <a href="https://bagonggalau.com" target="_blank">TOGEL ONLINE</a>
         </nav>
         <div class="nav-btn">
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-daftar">Daftar</a>
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer" class="btn btn-login">Login</a>
+            <a href="https://bagonggalau.com" target="_blank" class="btn btn-daftar">Daftar</a>
+            <a href="https://bagonggalau.com" target="_blank" class="btn btn-login">Login</a>
         </div>
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
@@ -329,48 +42,52 @@
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-left">
             <img src="img/hero.png" alt="Dauntogel situs togel terpercaya">
-            <a href="https://bagonggalau.com/" target="_blank" rel="noopener noreferrer" class="cta">DAFTAR DISINI</a>
+            <a href="https://bagonggalau.com" target="_blank" rel="noopener noreferrer" class="cta">DAFTAR DISINI</a>
         </div>
         <div class="hero-right">
-            <h1>Dauntogel Situs Togel Online Terpercaya & Terbaik 2026</h1>
-            <p>Dauntogel dikenal sebagai situs togel terpercaya yang menghadirkan pengalaman bermain modern dengan
-                sistem yang cepat, aman, dan stabil. Di tengah banyaknya platform togel online saat ini, Dauntogel
-                berhasil menjadi pilihan utama berkat kualitas layanan dan konsistensi dalam memberikan pengalaman
-                terbaik.</p>
-            <p>Dengan akses mudah melalui desktop maupun smartphone, pengguna dapat menikmati permainan tanpa hambatan.
-                Sistem yang responsif memastikan setiap proses, mulai dari pendaftaran hingga transaksi, berjalan cepat
-                dan aman.</p>
+            <!-- Konten hero-right bisa ditambahkan di sini -->
         </div>
     </section>
 
+    <!-- DESKRIPSI -->
+    <section>
+        <h1>Dauntogel Situs Togel Online Terpercaya Terbaik 2026</h1>
+        <p>Dauntogel dikenal sebagai situs togel terpercaya yang menghadirkan pengalaman bermain modern dengan sistem yang cepat, aman, dan stabil. Di tengah banyaknya platform togel online saat ini, Dauntogel berhasil menjadi pilihan utama berkat kualitas layanan dan konsistensi dalam memberikan pengalaman terbaik.</p>
+        <p>Dengan akses mudah melalui desktop maupun smartphone, pengguna dapat menikmati permainan tanpa hambatan. Sistem yang responsif memastikan setiap proses, mulai dari pendaftaran hingga transaksi, berjalan cepat dan aman.</p>
+    </section>
+
+    <!-- BANNER -->
     <section class="banner">
         <img src="img/banner.png" alt="Bonus member baru situs togel online">
     </section>
 
+    <!-- REVIEW -->
     <section class="review">
         <h2>Review Pemain Dauntogel</h2>
         <div class="review-box">
             <div class="card">
-                <h3>Rosalyn</h3>
-                <p>"Main di dauntogel cepat dan nyaman, WD lancar tanpa kendala. Recommended banget!"</p>
+                <h3>Rosaly</h3>
+                <p>Main di dauntogel cepat dan nyaman, WD lancar tanpa kendala. Recommended banget!</p>
                 <div class="stars">★★★★★</div>
             </div>
             <div class="card">
                 <h3>Ahmad</h3>
-                <p>"Akses dari HP ringan dan stabil. Tampilannya simpel tapi performanya bagus."</p>
+                <p>Akses dari HP ringan dan stabil. Tampilannya simpel tapi performanya bagus.</p>
                 <div class="stars">★★★★★</div>
             </div>
             <div class="card">
                 <h3>Bintang</h3>
-                <p>"Pasaran lengkap dan update cepat. Enak buat analisa sebelum pasang angka."</p>
+                <p>Pasaran lengkap dan update cepat. Enak buat analisa sebelum pasang angka.</p>
                 <div class="stars">★★★★★</div>
             </div>
         </div>
     </section>
 
+    <!-- ICON FITUR -->
     <section class="icon">
         <div class="icon-grid">
             <div class="icon-box">
@@ -388,8 +105,9 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        &copy; Copyright 2025 Dauntogel
+        Copyright 2025 Dauntogel
     </footer>
 
     <script>
@@ -401,5 +119,4 @@
     </script>
 
 </body>
-
 </html>
