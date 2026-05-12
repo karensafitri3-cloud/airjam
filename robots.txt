@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://airjam.online/sitemap.xml
